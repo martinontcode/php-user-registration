@@ -1,11 +1,15 @@
-# php-user-registration
-PHP user registration script. Includes proper password salting and hashing.
+# Secure PHP user registration script
+PHP user registration script that includes proper password salting and hashing, MySQLi injection protection anda simple design.
+## Screenshot
+![Registration Form](http://i.imgur.com/kvFVzsp.png)
 ## Who is this script for ?
-If you are looking for a simple registration script then this is for you. A lot of beginners try to build registration scripts from scratch and end up using outdated salting and hashing. This script comes with a fully implemented user registration system covering most of security issues.
+If you are looking for a simple registration script then this is for you. A lot of beginners try to build registration scripts from scratch and end up using outdated salting and hashing. This script comes with a fully implemented user registration system covering most of security issues. You should use this login script with the registraton script also available on my [Github] (https://github.com/MartinoEst/secured-php-login).
 ## Requirements
 1. PHP 5.6
 2. mySQLi activated
 
+## Live demo
+http://registration.martincodes.com
 ## Installation
 Create a database called "login" with table called "users", at minimal add columns 'id','username','password' & 'email'.
 Change database server, user, password in config/dbconnect.php.
