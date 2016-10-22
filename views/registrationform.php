@@ -1,5 +1,7 @@
 <!-- Include Bootstrap .css ; You can copy this to your header file instead. I've added custom code at the end. -->
 <link rel="stylesheet" href="css/bootstrap.css">
+<!-- Custom -->
+<link rel="stylesheet" href="css/custom.css">
 
 <div class="container">
     
@@ -7,6 +9,7 @@
 <form method="post" action="index.php" name="registrationform" class="form-registration">
 
 <div class="form-group">
+    <div class="cnt"><h3>User registration</h3></div>
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" placeholder="Username" class="input form-control" autocomplete="off" required autofocus><br>
     <label for="password">Password:</label>
@@ -31,8 +34,14 @@
     </div>
 <?php endif; ?>
 
+<!-- URL to registration form -->
+<div class="cnt"><a href="#">Already signed up? Log in here</a></div>
+
 </form>
 <!-- End Registration Form -->
+
+<!-- Remove this to remove the GitHub URL link -->
+<div class="cnt gray"><a href="https://github.com/MartinoEst/php-user-registration">Check out this code at GitHub</a></div>
 
 </div>
 <!-- End div -->

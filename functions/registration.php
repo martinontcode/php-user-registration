@@ -7,9 +7,6 @@ class Registration{
      */
      public function __construct(){
          
-        /* Start session, this is necessary ! */
-        session_start();
-        
         /* Call for registration form */
         $this->showRegistration();
         
