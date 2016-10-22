@@ -1,4 +1,6 @@
 <?php
+if(!isset($_SESSION)) { session_start();} 
+/* Start session, this is necessary, you should place this into your header right after <?php syntax ! */ 
 
 /* php-user-registration
  * PHP user registration script, kept as minimal as possible.
