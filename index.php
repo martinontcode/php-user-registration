@@ -20,4 +20,4 @@ require_once("functions/registration.php");
 /* Call for registration class */
 $registration = new Registration();
 
-?>
+include("views/registrationform.php");

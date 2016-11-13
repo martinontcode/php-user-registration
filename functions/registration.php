@@ -6,27 +6,14 @@ class Registration{
      * Constructor will be called every time Registration class is called ($registration = new Registration())
      */
      public function __construct(){
-         
-        /* Call for registration form */
-        $this->showRegistration();
-        
+
         /* If registration data is posted call createUser function. */
         if (isset($_POST["registration"])) {
             $this->createUser();
         }
         
     } /* End __construct() */
-    
-    
-    /* function showRegistration()
-     * Call for registration form.
-     */
-    public function showRegistration(){
-                               
-        include("views/registrationform.php");
 
-    } /* End showRegistration() */
-    
     
     /* Function createUser(){
     * Function that includes everything for new user creation.
@@ -59,7 +46,9 @@ class Registration{
                 /* If username or email is taken */
                 if ($result->num_rows != 0) {
                     /* Promt user error about username or email already taken */
-                    header('Location: index.php?usercreated=taken');
+                    header('Location: index.php');
+                    $_SESSION['errorMessage'] = 3;
+                    exit();
                 } else {
                     /* Insert data into database. */
                     $sql = "INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES ('', '$username', "
@@ -67,19 +56,23 @@ class Registration{
                     $result = mysqli_query($conn, $sql);
                 
                     /* If registration is successful return user to registration.php and promt user success pop-up. */
-                    header('Location: index.php?usercreated=true');
+                    header('Location: index.php');
+                    $_SESSION['errorMessage'] = 4;
+                    exit();
                 } /* /EndIF */  
                 
             } else {
                 /* If registration fails return user to registration.php and promt user failure error. */
-                header('Location: index.php?usercreated=false');
+                header('Location: index.php');
+                $_SESSION['errorMessage'] = 2;
+                exit();
             }
 
         }   /* /EndIF */ 
-    
+        
     }   /* End createUser() */
+    
     
 } /* End class Registration */
 
-?>
 
