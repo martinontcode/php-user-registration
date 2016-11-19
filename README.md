@@ -11,11 +11,10 @@ If you are looking for a simple registration script then this is for you. A lot 
 ## Live demo
 http://registration.martincodes.com
 ## Installation
-Run the script below to create MySQL database.
+Create a MySQL database named 'membership'.
 Change database server, user, password in config/dbconnect.php.
+Run the script below to create MySQL table.
 ```
-CREATE DATABASE `membership`;
-USE `membership`;
 CREATE TABLE `users`(
   `id` INT(11) NOT NULL,
   `username` VARCHAR(20) NOT NULL,
