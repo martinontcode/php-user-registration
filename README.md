@@ -11,14 +11,17 @@ If you are looking for a simple registration script then this is for you. A lot 
 ## Live demo
 http://registration.martincodes.com
 ## Installation
-Create a database called "login" with table called "users", at minimal add columns 'id','username','password' & 'email'.
+Run the script below to create MySQL database.
 Change database server, user, password in config/dbconnect.php.
-Insert these 2 lines anywhere you want the login form to show up:
 ```
-/* Require registration.php to call registration class */
-require_once("functions/registration.php");
-/* Call for registration class */
-$registration = new Registration();
+CREATE DATABASE `membership`;
+USE `membership`;
+CREATE TABLE `users`(
+  `id` INT(11) NOT NULL,
+  `username` VARCHAR(20) NOT NULL,
+  `email` VARCHAR(40) NOT NULL,
+  `password` VARCHAR(128) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 ```
 ## License
 Licensed under MIT. You can use this script for free for any private or commercial projects.
