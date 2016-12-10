@@ -1,5 +1,7 @@
 # Secure PHP user registration script
 PHP user registration script that includes proper password salting and hashing, MySQLi injection protection anda simple design.
+## On HOLD
+As my university academic session is starting, I won't be able to update my projects as often as I would like to.
 ## Screenshot
 ![Registration Form](http://i.imgur.com/kvFVzsp.png)
 ## Who is this script for ?
